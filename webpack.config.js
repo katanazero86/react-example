@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -17,10 +19,15 @@ module.exports = {
                 }
             },
             {
+                test: /\.(css)/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
+            },
+            {
                 test: /\.(scss)/,
                 exclude: /node_modules/,
                 use: [
-                    "style-loader",
+                    // "style-loader",
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader"
                 ]
@@ -31,6 +38,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: './index.html'
+        }),
+        new MiniCssExtractPlugin({
+            filename: './index.css'
+        }),
+        new CleanWebpackPlugin({
+            cleanAfterEveryBuildPatterns: ['dist']
         })
     ],
     devServer: {
@@ -39,6 +52,7 @@ module.exports = {
         https: false, // true for self-signed, object for cert authority
         noInfo: false, // only errors & warns on hot reload
         port: 9000,
+        index: "index.html",
     },
 
 }
