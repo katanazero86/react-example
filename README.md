@@ -38,4 +38,7 @@ https://webpack.js.org/configuration/
 
 ```
 
+
 - https://velog.io/@katanazero86/React-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%84%B1
+
+- https://velog.io/@katanazero86/React-state-props-event-bind
