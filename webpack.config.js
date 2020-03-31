@@ -7,7 +7,7 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.js'
     },
-    module: {  // javascript 모듈을 생성할 규칙을 지정 (node_module을 제외한.js 파일을 babel-loader로 불러와 모듈을 생성
+    module: {
         rules: [
             {
                 test: /\.(js|jsx)/,
@@ -38,6 +38,7 @@ module.exports = {
         hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
         https: false, // true for self-signed, object for cert authority
         noInfo: false, // only errors & warns on hot reload
+        port: 9000,
     },
 
 }

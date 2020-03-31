@@ -25,7 +25,6 @@
 - webpack 모듈 설치(설정은 webpack.config.js)
 5. npm i -D webpack webpack-dev-server webpack-cli html-webpack-plugin
 
-
 6. 모듈 설치를 완료했으면, 프로젝트 루트 경로에 
 - webpack.config.js 생성
 - babel 설정은 package.json 에서 진행
@@ -38,3 +37,5 @@ https://webpack.js.org/configuration/
 
 
 ```
+
+- https://velog.io/@katanazero86/React-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%84%B1
