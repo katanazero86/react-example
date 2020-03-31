@@ -1,0 +1,45 @@
+.button-basic {
+
+    outline: none;
+    border: none;
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    padding : 6px;
+    font-size: 15px;
+
+    &:hover {
+        background-color: #e2e6ea;
+        border-color: #dae0e5;    
+    }
+
+    &-small {
+        font-size: 13px;
+        padding : 4px;
+    }
+
+    &-large {
+        font-size: 17px;
+        padding : 8px;
+    }
+
+    &-full-width {
+        width: 100%;
+    }
+
+}
+
+.button-basic-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+
+    &:hover {
+        background-color: #0069d9;
+        border-color: #0062cc;    
+    }
+}
