@@ -1,0 +1,10 @@
+.hello-wrap {
+    border: 1px solid black;
+
+    &-content {
+        color: green;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+}
