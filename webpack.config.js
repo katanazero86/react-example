@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -9,6 +9,8 @@ module.exports = {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.js'
     },
+    devtool : 'source-map',
+    // devtool : 'inline-source-maps',
     module: {
         rules: [
             {
@@ -20,7 +22,7 @@ module.exports = {
             },
             {
                 test: /\.(css)/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                use: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options : {sourceMap: true} }]
             },
             {
                 test: /\.(scss)/,
@@ -28,8 +30,8 @@ module.exports = {
                 use: [
                     // "style-loader",
                     MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader"
+                    { loader: 'css-loader', options : {sourceMap: true} },
+                    { loader: 'sass-loader', options : {sourceMap: true} } 
                 ]
             }
         ]
