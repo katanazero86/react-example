@@ -3,4 +3,16 @@ import ReactDOM from 'react-dom';
 
 import App from './components/App'
 
-ReactDOM.render(<App name='zero86' age='20'/>, document.getElementById('app'));
+// redux
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './store/index.js';
+
+const store = createStore(rootReducer);
+
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App name='zero86' age='20' />
+    </Provider>,
+    document.getElementById('app'));

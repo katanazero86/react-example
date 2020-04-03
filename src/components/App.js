@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import '../scss/App.scss';
 import Profile from './profile/Profile';
 import ButtonBasic from './atoms/ButtonBasic';
+import StoreTest from './StoreTest';
 
 // 함수형 컴포넌트
 // props 매개변수를 가진다 (컴포넌트 속성)
@@ -24,6 +25,8 @@ function App({name, age}) {
             <ButtonBasic onClick={() => setNumber(number + 1)} text="숫자 증가" color="primary" size="large" fullWidth={true}/>
             <hr/>
             <Profile/>
+            <hr/>
+            <StoreTest/>
         </div>
     );
     
