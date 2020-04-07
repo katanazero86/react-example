@@ -1,0 +1,4 @@
+
+export const REQUEST_FETCH = 'REQUEST_FETCH';
+export const REQUEST_SUCCEEDED = 'REQUEST_SUCCEEDED'; // 성공
+export const REQUEST_FAILED = 'REQUEST_FAILED'; // 실패
