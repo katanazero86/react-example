@@ -101,3 +101,41 @@ npm i -S @babel/polyfill
 설치 후, 적용해주자.
 
 ```
+
+
+###  모범 사례 따라해보기
+
+```
+
+- UI 컴포넌트 구현에서는 어떤 구조가 최적일까?
+
+- Presentaion Component : 보여주는 부분만 책임을 가짐
+- Container Component : 로직 부분에 대한 책임을 가짐
+
+ * SFC? Stateless Functional Component : 내부적으로 상태를 가지고 있지 않은 컴포넌트
+
+/src/components/userCard
+UserCard.js -> Presentation Component
+UserCardWrapper.js -> Container Component
+
+/src/components/switch
+SwitchContainer.js -> Container Component
+FlagSwitch.js -> Presentation Component
+ViewFlagValue.js -> Presentation Component
+
+-> 컨테이너가 프레젠테이션을 감싸는 형태
+
+```
+
+### jest 를 사용하여 컴포넌트 테스트 해보기
+
+```
+npm i -D jest
+npm i -D babel-jest
+
+- react 에서 TestUtils 제공 (import ReactTestUtils from 'react-dom/test-utils';)
+
+xxx.test.js 파일을 작성
+
+
+```

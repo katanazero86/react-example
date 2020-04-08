@@ -4,6 +4,8 @@ import '../scss/App.scss';
 import Profile from './profile/Profile';
 import ButtonBasic from './atoms/ButtonBasic';
 import StoreTest from './StoreTest';
+import UserCardWrapper from './userCard/UserCardWrapper';
+import SwitchContainer from './switch/SwitchContainer';
 
 // 함수형 컴포넌트
 // props 매개변수를 가진다 (컴포넌트 속성)
@@ -27,9 +29,14 @@ function App({name, age}) {
             <Profile/>
             <hr/>
             <StoreTest/>
+            <hr/>
+            <UserCardWrapper/>
+            <hr/>
+            <SwitchContainer/>
         </div>
     );
     
+
 }
 
 
