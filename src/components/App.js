@@ -6,6 +6,8 @@ import ButtonBasic from './atoms/ButtonBasic';
 import StoreTest from './StoreTest';
 import UserCardWrapper from './userCard/UserCardWrapper';
 import SwitchContainer from './switch/SwitchContainer';
+import CssInJsExample from './style/CssInJsExample';
+import CssModuleExample from './style/CssModuleExample';
 
 // 함수형 컴포넌트
 // props 매개변수를 가진다 (컴포넌트 속성)
@@ -33,6 +35,9 @@ function App({name, age}) {
             <UserCardWrapper/>
             <hr/>
             <SwitchContainer/>
+            <hr/>
+            <CssInJsExample/>
+            <CssModuleExample/>
         </div>
     );
     

@@ -22,7 +22,9 @@ module.exports = {
             },
             {
                 test: /\.(css)/,
-                use: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options : {sourceMap: true} }]
+                use: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options : {sourceMap: true, modules: {
+                    localIdentName: '[local]-[hash:base64:5]'
+                }} }],
             },
             {
                 test: /\.(scss)/,
