@@ -3,27 +3,26 @@
 - react 를 구성해보고, 간단한 사용법을 익히고자 프로젝트 생성
 - 툴은 VSCode 사용
 
-
 ### 프로젝트 구성
 
 ```
 - node.js 가 설치가 되어있어야한다.
-1. npm init
+npm init
 
 - create-react-app 을 이용하여 초기 시작 프로젝트를 구성 가능
-2. npx create-react-app my-app
+npx create-react-app my-app
 
 
-저는 공부를 하는 목적이기 때문에, 직접 구성으로 진행하겠습니다.
+CRA를 이용하여도 좋으나, 직접 구성으로 진행하겠습니다.
 
 - react 모듈, react-dom 모듈 설치
-3. npm i -S react react-dom
+npm i -S react react-dom
 
 - babel 모듈 설치(설정은 .babelrc)
-4. npm i -D @babel/core babel-loader @babel/preset-env @babel/preset-react
+npm i -D @babel/core babel-loader @babel/preset-env @babel/preset-react
 
 - webpack 모듈 설치(설정은 webpack.config.js)
-5. npm i -D webpack webpack-dev-server webpack-cli html-webpack-plugin
+npm i -D webpack webpack-dev-server webpack-cli html-webpack-plugin
 
 6. 모듈 설치를 완료했으면, 프로젝트 루트 경로에 
 - webpack.config.js 생성
@@ -35,11 +34,18 @@ https://webpack.js.org/configuration/
 7. npm i -D node-sass sass-loader style-loader css-loader
 - scss 적용을 위한 모듈 설치
 
-
-
 ```
 
-
+```
+- react 에 필요한 npm dependencies(이정도만 기억을 해두자!)
+react
+react-dom
+react-redux
+redux
+redux-saga
+babel
+webpack
+```
 
 - https://velog.io/@katanazero86/React-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%84%B1
 
@@ -137,5 +143,31 @@ npm i -D babel-jest
 
 xxx.test.js 파일을 작성
 
+
+```
+
+
+### react 프로젝트에 storybook 적용 해보기
+
+```
+
+npm install @storybook/react --save-dev
+
+add scripts
+
+"scripts": {
+  "storybook": "start-storybook"
+}
+
+create file
+
+.storybook/main.js
+/src/components/story/index.stories.js
+
+npm run storybook
+
+- 몇가지 addon 모듈을 추가
+npm i -D @storybook/addon-docs
+npm i -D @storybook/addon-knobs
 
 ```
